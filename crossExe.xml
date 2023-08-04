@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	<listeners><listener class-name="com.GenericUtilities.ListenerImplementation"></listener></listeners>
+	<parameter name="BROWSER" value="chrome"></parameter>
+  <test thread-count="5" parallel="tests" name="Test1">
+    <classes>
+      <class name="testExecution.Example2Test"/>
+      <class name="testExecution.Example1Test"/>
+    </classes>
+  </test>
+  
+  <parameter name="BROWSER" value="EDGE"></parameter>
+  <test thread-count="5" parallel="tests" name="Test2">
+    <classes>
+      <class name="testExecution.Example2Test"/>
+      <class name="testExecution.Example1Test"/>
+    </classes>
+  </test>
+  
+  
+   <!-- Test -->
+</suite> <!-- Suite -->
